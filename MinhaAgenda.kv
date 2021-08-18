@@ -1,0 +1,100 @@
+#:import utils kivy.utils
+<Principal>:
+    orientation : 'vertical'
+    BoxLayout:
+        orientation : 'vertical'
+        size_hint   : (None,None)
+        height      : 400
+        Label:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            text      : 'IDveiculo(exceto p/ NOVO CADASTRO):'
+        TextInput:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            id        : txID
+            text      : ''
+            multiline : False
+        Label:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            text      : 'Marca do veiculo:'
+        TextInput:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            id        : txMarca
+            text      : ''
+            multiline : False
+        Label:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            text      : 'Cor do veiculo:'
+        TextInput:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            id        : txCor
+            text      : ''
+            multiline : False
+        Label:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            text      : 'Tipo do veiculo(carro, onibus, moto):'
+        TextInput:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            id        : txTipo
+            text      : ''
+            multiline : False
+        Label:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            text      : 'Local de desembarque:'
+        TextInput:
+            size_hint :(None,None)
+            height    : 40
+            width     : 400
+            id        : txDesembarque
+            text      : ''
+            multiline : False
+    BoxLayout:
+        Button:
+            size_hint : (None,None)
+            height    : 50
+            width     : 133
+            id        : btCriar
+            text      : 'Novo'
+            on_press  : root.CadastrarVeiculo()
+        Button:
+            size_hint : (None,None)
+            height    : 50
+            width     : 133
+            id        : btExcluir
+            text      : 'Excluir'
+            on_press  : root.excluir()
+        Button:
+            size_hint : (None,None)
+            height    : 50
+            width     : 133
+            id        : btSair
+            text      : 'Sair'
+            on_press  : root.sair()
+    BoxLayout:
+        size_hint     : (None,None)
+        height        : 30
+        width         : 400
+        Label:
+            id        : mensagem
+            text      : ''
+            markup    : True
+            font_size : 15
+            pos_hint  : {'x':0.1,'y':0.1}
+    
